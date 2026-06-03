@@ -98,5 +98,13 @@ Thumbs.db
 *.bak
 *.swp
 
-# Ignore all text files
-*.txt
+# Network captures — don't commit packet data
+*.pcap
+*.cap
+
+# Sensitive files — never commit these
+config.ini
+secrets.py
+credentials.py
+*.key
+*.pem
