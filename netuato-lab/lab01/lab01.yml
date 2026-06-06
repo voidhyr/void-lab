@@ -1,0 +1,43 @@
+name: lab01
+
+topology:
+  nodes:
+    R1:
+      kind: linux
+      image: frrouting/frr:latest
+      exec:
+        - apt-get update -qq
+        - apt-get install -y openssh-server -qq
+        - mkdir -p /run/sshd
+        - echo 'root:admin' | chpasswd
+        - sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+        - sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+        - /usr/sbin/sshd
+
+    R2:
+      kind: linux
+      image: frrouting/frr:latest
+      exec:
+        - apt-get update -qq
+        - apt-get install -y openssh-server -qq
+        - mkdir -p /run/sshd
+        - echo 'root:admin' | chpasswd
+        - sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+        - sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+        - /usr/sbin/sshd
+
+    R3:
+      kind: linux
+      image: frrouting/frr:latest
+      exec:
+        - apt-get update -qq
+        - apt-get install -y openssh-server -qq
+        - mkdir -p /run/sshd
+        - echo 'root:admin' | chpasswd
+        - sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+        - sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+        - /usr/sbin/sshd
+
+  links:
+    - endpoints: ["R1:eth1", "R2:eth1"]
+    - endpoints: ["R2:eth2", "R3:eth1"]
