@@ -1,9 +1,9 @@
 from netmiko import ConnectHandler
 
 devices = [
-    {"name": "R1", "host": "172.20.20.3"},
-    {"name": "R2", "host": "172.20.20.4"},
-    {"name": "R3", "host": "172.20.20.2"},
+    {"name": "R1", "host": "172.20.20.2"},
+    {"name": "R2", "host": "172.20.20.3"},
+    {"name": "R3", "host": "172.20.20.4"},
 ]
 
 for device in devices:
