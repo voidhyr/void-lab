@@ -6,10 +6,10 @@ topology:
       kind: linux
       image: frrouting/frr:latest
       exec:
-        - apt-get update -qq
-        - apt-get install -y openssh-server -qq
+        - apk add --no-cache openssh-server shadow
         - mkdir -p /run/sshd
-        - echo 'root:admin' | chpasswd
+        - ssh-keygen -A
+        - sh -c "echo 'root:admin' | chpasswd"
         - sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
         - sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
         - /usr/sbin/sshd
@@ -18,10 +18,10 @@ topology:
       kind: linux
       image: frrouting/frr:latest
       exec:
-        - apt-get update -qq
-        - apt-get install -y openssh-server -qq
+        - apk add --no-cache openssh-server shadow
         - mkdir -p /run/sshd
-        - echo 'root:admin' | chpasswd
+        - ssh-keygen -A
+        - sh -c "echo 'root:admin' | chpasswd"
         - sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
         - sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
         - /usr/sbin/sshd
@@ -30,10 +30,10 @@ topology:
       kind: linux
       image: frrouting/frr:latest
       exec:
-        - apt-get update -qq
-        - apt-get install -y openssh-server -qq
+        - apk add --no-cache openssh-server shadow
         - mkdir -p /run/sshd
-        - echo 'root:admin' | chpasswd
+        - ssh-keygen -A
+        - sh -c "echo 'root:admin' | chpasswd"
         - sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
         - sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
         - /usr/sbin/sshd
