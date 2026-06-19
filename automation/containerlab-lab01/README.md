@@ -17,6 +17,14 @@ R1 -- R2 -- R3
 - `healthcheck.py` — pings all nodes after deploy, reports reachability
 - `NOTES.md` — engineering journal (what broke, what I learned)
 
+## Setup
+
+```bash
+python3 -m venv netauto-env
+source netauto-env/bin/activate
+pip install -r requirements.txt
+```
+
 ## Run
 
 ```bash
