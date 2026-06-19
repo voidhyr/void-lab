@@ -33,7 +33,6 @@ if rs.returncode == 0:
         )
 
         print(f"\nNode: {node['name']}")
-        print(f"IP: {ip}")
 
         if ping_rs.returncode == 0:
             print("Reachable")
