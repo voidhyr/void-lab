@@ -1,16 +1,16 @@
-# python-network-lab
+# void-lab
 
-> Python for network automation and infrastructure engineering.
-> From fundamentals to network tooling — built in public.
+> Python for DevOps, automation, and infrastructure engineering.
+> From fundamentals to real tooling — built in public.
 
 ---
 
 ## What this is
 
 I'm Dani (voidhyr) — MSc CS student in Kerala, India,
-targeting network automation engineering. This repo
+targeting DevOps and automation engineering. This repo
 documents my Python journey from fundamentals to
-real network automation and infrastructure tooling.
+real automation tooling and infrastructure scripting.
 
 Not a tutorial repo. A working lab.
 
@@ -23,7 +23,7 @@ Not a tutorial repo. A working lab.
 | `fundamentals/` | Python basics, OOP, DSA, patterns |
 | `projects/` | Standalone Python projects |
 | `networking/` | Network tools — port scanner, monitor |
-| `automation/` | Network automation scripts, Ansible |
+| `automation/` | Automation scripts, CI/CD tooling, Ansible |
 | `security/` | Cryptography implementations |
 
 ---
@@ -42,11 +42,9 @@ Not a tutorial repo. A working lab.
 
 ## Stack
 
-```
 Language:  Python 3
-Tools:     Linux · Git · Neovim · Wireshark
-Target:    Network Automation Engineering
-```
+Tools:     Linux · Git · Neovim · Docker · Containerlab
+Target:    DevOps & Automation Engineering
 
 ---
 
@@ -61,10 +59,10 @@ Target:    Network Automation Engineering
 
 ## About
 
-MSc CS | Kerala, India | Targeting Network Automation Engineering
+MSc CS | Kerala, India | Targeting DevOps & Automation Engineering
 
-Building Python tools for network infrastructure —
-automation scripts, protocol analysis, and network tooling.
+Building Python tools for infrastructure automation —
+automation scripts, CI/CD tooling, and network-aware operations.
 
 → [Portfolio](https://voidhyr.github.io/Personal-Website)
 → [Articles](https://dev.to/voidhyr)
