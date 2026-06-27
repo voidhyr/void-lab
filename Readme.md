@@ -1,18 +1,17 @@
 # void-lab
 
-> Python for DevOps, automation, and infrastructure engineering.
-> From fundamentals to real tooling — built in public.
+> A hands-on engineering lab — DevOps, automation, and infrastructure.
+> Built in public. Everything here is real work.
 
 ---
 
-## What this is
+## About
 
-I'm Dani (voidhyr) — MSc CS student in Kerala, India,
-targeting DevOps and automation engineering. This repo
-documents my Python journey from fundamentals to
-real automation tooling and infrastructure scripting.
+I'm Dani (voidhyr) — MSc CS student in Kerala, India, targeting DevOps
+and automation engineering. This repo documents my practical work across
+Docker, CI/CD, infrastructure automation, and Python tooling.
 
-Not a tutorial repo. A working lab.
+Network-aware background. DevOps focus.
 
 ---
 
@@ -20,15 +19,25 @@ Not a tutorial repo. A working lab.
 
 | Folder | What's inside |
 |---|---|
+| `devops/` | Docker, CI/CD pipelines, infrastructure tooling |
+| `devops/automation/` | Containerlab labs, network automation scripts |
 | `fundamentals/` | Python basics, OOP, DSA, patterns |
 | `projects/` | Standalone Python projects |
 | `networking/` | Network tools — port scanner, monitor |
-| `automation/` | Automation scripts, CI/CD tooling, Ansible |
 | `security/` | Cryptography implementations |
 
 ---
 
-## Projects
+## DevOps Work
+
+| Lab / Project | Description | Status |
+|---|---|---|
+| containerlab-lab01 | 3-router FRR topology, automated hostname collection via Netmiko, healthcheck script | ✅ Done |
+| docker-fundamentals | Dockerfile, networking, Compose — from scratch | 🔧 In progress |
+
+---
+
+## Python Projects
 
 | Project | Description | Status |
 |---|---|---|
@@ -42,9 +51,9 @@ Not a tutorial repo. A working lab.
 
 ## Stack
 
-Language:  Python 3
-Tools:     Linux · Git · Neovim · Docker · Containerlab
-Target:    DevOps & Automation Engineering
+Languages:  Python 3 · Go
+Tools:      Docker · Linux · Git · Containerlab · GitHub Actions
+Target:     DevOps & Automation Engineering
 
 ---
 
@@ -61,8 +70,8 @@ Target:    DevOps & Automation Engineering
 
 MSc CS | Kerala, India | Targeting DevOps & Automation Engineering
 
-Building Python tools for infrastructure automation —
-automation scripts, CI/CD tooling, and network-aware operations.
+Building toward infrastructure automation — CI/CD pipelines, containerized
+environments, and Python tooling for DevOps workflows.
 
 → [Portfolio](https://voidhyr.github.io/Personal-Website)
 → [Articles](https://dev.to/voidhyr)
