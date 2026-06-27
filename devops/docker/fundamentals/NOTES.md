@@ -63,3 +63,28 @@
 - Same concept as physical/virtual networking — just docker-managed
 - Containers on same bridge can reach each other by IP
 - Isolated from host by default
+
+### Docker Compose
+
+**What it is**
+- Define and run multiple containers with a single file
+- No need to install services locally — Docker pulls images automatically
+
+**docker-compose.yml structure**
+- `services:` — define each container
+- `build: .` — build from local Dockerfile
+- `image:` — pull from Docker Hub
+
+**Experiment**
+- Two services: app (Python script) + redis (redis:alpine)
+- app ran script.py and exited cleanly (code 0)
+- redis stayed running on port 6379/tcp
+- `docker compose ps` shows status of each service
+
+**Fix applied**
+- Removed `version: "3.8"` — obsolete in modern Compose, causes warning
+
+**Key commands**
+- `docker compose up` — start all services
+- `docker compose down` — stop and remove containers
+- `docker compose ps` — check status
