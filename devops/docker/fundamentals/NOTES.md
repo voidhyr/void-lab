@@ -40,3 +40,26 @@
 - Layers are cached — unchanged layers don't rebuild
 - Instruction order matters: put stable things at top, changing things at bottom
 - COPY is correctly at the bottom (changes most often)
+
+### Docker Networking
+
+**Default networks**
+- bridge — default, containers isolated from host but can talk to each other
+- host — container shares host network directly, no isolation
+- none — no networking
+
+**Bridge network**
+- Subnet: 172.17.0.0/16, Gateway: 172.17.0.1
+- Virtual interface: docker0 on host
+- Containers get IPs automatically starting from 172.17.0.2
+
+**Experiment**
+- Ran nginx as webserver: got 172.17.0.2
+- Ran alpine container, pinged 172.17.0.2 → 0% packet loss
+- Two containers communicating over bridge network
+- sys-info container showed empty in bridge inspect — exits immediately, no long-running process
+
+**Key insight**
+- Same concept as physical/virtual networking — just docker-managed
+- Containers on same bridge can reach each other by IP
+- Isolated from host by default
