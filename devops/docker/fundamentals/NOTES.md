@@ -95,9 +95,9 @@
 **Goal:** Volumes + build a real multi-container app with Compose
 
 ### Plan
-- [ ] Understand volumes — why and when
-- [ ] Mount a volume, verify persistence
-- [ ] Build a real compose app (Python + Redis, actually connected)
+- [x] Understand volumes — why and when
+- [x] Mount a volume, verify persistence
+- [x] Build a real compose app (Python + Redis, actually connected)
 
 ### Volumes
 
