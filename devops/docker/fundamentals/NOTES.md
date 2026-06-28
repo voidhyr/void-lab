@@ -116,3 +116,32 @@
 - `docker volume ls` — list volumes
 - `docker volume inspect <name>` — see where data is stored on host
 - `-v volumename:/path` — mount volume when running container
+
+### Real App — Hit Counter (Python + Redis + Volume)
+
+**What it does**
+- Python app connects to Redis, increments a counter on every run
+- Redis data persists via named volume across container restarts
+
+**app.py**
+- `redis.Redis(host='redis', port=6379)` — host is the compose service name, not an IP
+- Docker handles DNS between containers automatically
+- `r.incr('hits')` — creates key if not exists, increments by 1, returns new value
+
+**Dockerfile changes**
+- COPY app.py . (changed from script.py)
+- Added `RUN pip3 install redis` to install redis library
+- CMD runs app.py
+
+**docker-compose.yml changes**
+- Added volume mount to redis service: `redis-data:/data`
+- Added top-level `volumes:` declaration
+
+**Persistence proof**
+- First run: Hit count 1
+- After docker compose down + up: count continued (3, 4)
+- Data survived container removal because it lives in the volume, not the container
+
+**Key insight**
+- `--build` flag forces Docker to rebuild image instead of using cache
+- Without --build, Dockerfile changes are ignored
