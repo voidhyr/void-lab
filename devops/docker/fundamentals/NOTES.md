@@ -98,3 +98,21 @@
 - [ ] Understand volumes — why and when
 - [ ] Mount a volume, verify persistence
 - [ ] Build a real compose app (Python + Redis, actually connected)
+
+### Volumes
+
+**What they are**
+- Containers are ephemeral — data inside is lost when container exits
+- Volumes store data outside the container on the host
+- Data persists across container restarts and removals
+
+**Experiment**
+- Without volume: wrote file inside container, fresh container couldn't find it
+- With volume: `-v mydata:/data` — same data accessible from two different containers
+- `mydata` = named volume managed by Docker
+- `/data` = mount point inside container
+
+**Key commands**
+- `docker volume ls` — list volumes
+- `docker volume inspect <name>` — see where data is stored on host
+- `-v volumename:/path` — mount volume when running container
