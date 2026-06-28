@@ -11,11 +11,11 @@
 - OS: Ubuntu (ProBook)
 
 ### Plan
-- [ ] Write first Dockerfile (Python script)
-- [ ] Build and run image, understand layers
-- [ ] Docker networking basics
-- [ ] Docker Compose — multi-container setup
-- [ ] Volumes — persistent data
+- [x] Write first Dockerfile (Python script)
+- [x] Build and run image, understand layers
+- [x] Docker networking basics
+- [x] Docker Compose — multi-container setup
+- [x] Volumes — persistent data
 
 ### Notes
 ### What I did
