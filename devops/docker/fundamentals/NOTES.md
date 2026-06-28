@@ -88,3 +88,13 @@
 - `docker compose up` — start all services
 - `docker compose down` — stop and remove containers
 - `docker compose ps` — check status
+
+## Session 2
+
+**Date:** 2026-06-28
+**Goal:** Volumes + build a real multi-container app with Compose
+
+### Plan
+- [ ] Understand volumes — why and when
+- [ ] Mount a volume, verify persistence
+- [ ] Build a real compose app (Python + Redis, actually connected)
