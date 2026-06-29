@@ -153,10 +153,10 @@
 **Goal:** GitHub Actions — automate building and testing Docker image on every push
 
 ### Plan
-- [ ] Understand what CI/CD is and why
-- [ ] Write first GitHub Actions workflow
-- [ ] Automate Docker build on push
-- [ ] Add a simple test step
+- [x] Understand what CI/CD is and why
+- [x] Write first GitHub Actions workflow
+- [x] Automate Docker build on push
+- [x] Add a simple test step
 
 ### GitHub Actions — CI/CD
 
