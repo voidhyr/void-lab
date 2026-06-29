@@ -9,9 +9,9 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-  steps:
-    - name: Check out repository
-      uses: actions/checkout@v4
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-    - name: Build project
-      run: docker build -t sys-info ./devops/docker/fundamentals
+      - name: Build project
+        run: docker build -t sys-info ./devops/docker/fundamentals
