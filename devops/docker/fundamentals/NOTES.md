@@ -157,3 +157,30 @@
 - [ ] Write first GitHub Actions workflow
 - [ ] Automate Docker build on push
 - [ ] Add a simple test step
+
+### GitHub Actions — CI/CD
+
+**What it is**
+- Every push to master triggers automated build on GitHub's servers
+- Workflow file lives at `.github/workflows/docker-build.yml`
+- GitHub reads it automatically — no setup needed beyond the file
+
+**Workflow structure**
+- `name:` — workflow name shown in Actions tab
+- `on:` — when to trigger (push, pull_request, branches)
+- `jobs:` — what to run
+- `runs-on:` — which OS to use (ubuntu-latest)
+- `steps:` — ordered list of tasks
+
+**Steps used**
+- `actions/checkout@v4` — clones repo onto runner
+- `docker build -t sys-info ./devops/docker/fundamentals` — builds image
+
+**Fixes applied**
+- `ubuntu-lastest` typo → `ubuntu-latest`
+- `runs_on` → `runs-on` (hyphen not underscore)
+- YAML indentation — `steps:` must be nested under job, not at job level
+
+**Result**
+- Workflow runs in ~28s on every push
+- Green checkmark = Docker image builds successfully
