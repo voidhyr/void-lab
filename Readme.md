@@ -1,82 +1,85 @@
 # void-lab
 
-> A hands-on data engineering lab — learning, research, and real pipelines.
-> Built in public. Everything here is real work, not coursework.
-
----
+> A hands-on software development lab for learning, building, and independent experiments.
+> Exploring the Void — From Curiosity to Creation.
 
 ## About
 
-I'm Dani (voidhyr) — MSc CS student in Kerala, India, pivoting into
-**Data Engineering**, with a focus on Data Platform & Reliability
-Engineering (DataOps) and Analytics Engineering. This repo documents
-independent, self-directed learning and research — SQL, Python for data,
-data modeling, orchestration, and data quality — built outside any
-academic curriculum.
+I'm Dani (voidhyr), an aspiring Software Engineer interested in building useful
+software and understanding how systems work. This repository documents my
+practice with Python, SQL, software development, and data systems.
 
-Everything here is self-taught and self-driven. No coursework, no
-assignments — just real pipelines, real bugs, and real fixes.
+My broader interests include AI models, security, Linux, and independent,
+non-academic research. Data engineering is one area I’m exploring, rather than
+the only direction of this lab. Work here may support personal or college
+projects; each project should explain its purpose and current status.
 
----
+## Learning Order
 
-## Structure
+This is a learning roadmap, not a list of completed skills. Use Git, the Linux
+terminal, and debugging throughout; practise SQL alongside Python once the
+Python basics are comfortable.
 
-| Folder | What's inside |
-|---|---|
-| `pipelines/` | ETL/ELT pipelines, orchestration DAGs |
-| `sql/` | SQL practice, query patterns, schema design |
-| `python-for-data/` | Pandas/Polars scripts, data wrangling, validation logic |
-| `data-modeling/` | Star schemas, dimensional modeling exercises |
-| `fundamentals/` | Python basics, OOP, DSA, patterns |
-| `research/` | Notes and write-ups on data engineering concepts and tools |
-| `archive/` | Earlier DevOps/networking work and misc projects, kept for history |
+| Order | Focus                                                                                                  | Practical milestone                                                                                 | Location                          |
+| ----- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- | --------------------------------- |
+| 1     | Python foundations: collections, functions, files, exceptions, modules, and classes                    | Build a small command-line tool and explain its behavior                                            | `fundamentals/` — existing        |
+| 2     | Software development: project structure, virtual environments, dependencies, Git, debugging, and tests | Turn a script into a documented project with meaningful pytest tests                                | `software-development/` — planned |
+| 3     | SQL and PostgreSQL: joins, aggregation, schemas, constraints, transactions, and indexes                | Build a Python tool that stores and queries data                                                    | `sql/` — planned                  |
+| 4     | HTTP and FastAPI: requests, responses, validation, and error handling                                  | Expose a database-backed feature through an API                                                     | `backend/` — planned              |
+| 5     | Docker and development automation                                                                      | Run the application and PostgreSQL with Docker Compose; automate tests                              | `environments/` — planned         |
+| 6     | Data processing, modeling, and pipelines                                                               | Build ingestion, transformation, validation, and safe reruns; add Airflow when scheduling is needed | `data/` — planned                 |
+| 7     | AI and research experiments                                                                            | Ask a specific question, establish a baseline, and record reproducible results                      | `experiments/` — planned          |
 
----
+Study basic data structures and algorithms alongside these projects. Advanced
+algorithm exercises do not need to block building useful software.
 
-## Current Project — Automated ETL Pipeline with Data Quality Validation
+## Existing Structure
 
-My active project (also my MSc Minor Project, but built and understood
-independently of the coursework): an ETL pipeline that pulls weather
-data from the OpenWeatherMap API, validates it with custom Python data
-quality checks, loads it into a PostgreSQL star schema, orchestrates it
-with Apache Airflow, and visualizes it in Looker Studio.
+| Folder                         | Contents                                                            |
+| ------------------------------ | ------------------------------------------------------------------- |
+| `fundamentals/basics/`         | Introductory Python exercises and small scripts                     |
+| `fundamentals/intermediate/`   | Additional Python practice and small games                          |
+| `fundamentals/intermediate-2/` | Collections, loops, and other practice scripts                      |
+| `fundamentals/oop/`            | Object-oriented programming practice                                |
+| `fundamentals/patterns/`       | Pattern-printing exercises                                          |
+| `fundamentals/dsa/`            | Searching, sorting, graph algorithms, and other exercises           |
+| `archive/`                     | Earlier DevOps, networking, and project work retained for reference |
 
-Runs entirely on local infrastructure. Follow-on plans include a
-Medallion architecture, dbt, Docker Compose on a cloud VM, and a
-Streamlit dashboard.
+Planned folders in the roadmap will be added when they contain actual work.
 
----
+## Current Project: Weather ETL Pipeline
 
-## Stack
+My college ETL project is an opportunity to practise Python, SQL, and reliable
+data processing. The intended workflow collects weather data from the
+OpenWeatherMap API, validates records, loads a PostgreSQL star schema, and
+schedules processing with Apache Airflow. Looker Studio is the planned
+reporting layer; its connection to local data needs to be handled separately.
 
-Languages:  Python 3 · SQL
-Tools:      PostgreSQL · Pandas · Apache Airflow · Git · Looker Studio
-Target:     Data Engineering — DataOps / Analytics Engineering
+Project repository: [proETL](https://github.com/voidhyr/proETL)
 
----
+Implementation status belongs in the project README. Future extensions should
+follow a concrete need or experiment rather than a checklist of tools.
 
-## Ground Rules
+## Tools and Direction
 
-- Every script is understood before it is committed
-- No copy-paste without knowing what it does
-- Every project has a README explaining what and why
-- Break things intentionally, then understand why
-- Learning happens here, not in a classroom — this is independent research and practice
+- **Foundation:** Python, SQL, Git, and Linux
+- **Development roadmap:** PostgreSQL, pytest, FastAPI, and Docker
+- **Data project tools:** pandas and Apache Airflow
+- **Future exploration:** AI models, security, and Linux experiments
 
----
+## Working Principles
 
-## About
+- Build small, working programs before expanding their scope.
+- Understand code well enough to explain, change, and debug it.
+- Use AI as a learning aid; verify generated code and document assistance where relevant.
+- Write tests for meaningful behavior, including failure cases.
+- Document each project’s purpose, setup, limitations, and lessons learned.
+- Run experiments in a controlled environment and record results honestly.
 
-MSc CS student | Kerala, India | Learning & researching Data Engineering
-independently — targeting a fresher-level Data Engineer role.
+## Connect
 
-Building toward reliable, well-tested data pipelines — ETL/ELT design,
-data quality validation, and orchestration.
+[**Enter the Void → Personal Site**](https://voidhyr.github.io/Personal-Website/)
 
-→ [Portfolio](https://voidhyr.github.io/Personal-Website)
-→ [Articles](https://dev.to/voidhyr)
-→ [X](https://x.com/voidhyr)
+[Articles](https://dev.to/voidhyr) · [X](https://x.com/voidhyr)
 
----
-
-*Learn first. Validate everything.*
+_Build it. Question it. Understand it._
