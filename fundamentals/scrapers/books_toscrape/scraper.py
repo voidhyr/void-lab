@@ -4,6 +4,8 @@ from urllib.parse import urljoin
 import httpx
 from bs4 import BeautifulSoup
 
+from fundamentals.scrapers.books_toscrape.db import init_db, save_book, fetch_summary
+
 rating_map = {"One": 1, "Two": 2, "Three": 3, "Four": 4, "Five": 5}
 current_url = "https://books.toscrape.com/"
 header = {
@@ -13,6 +15,7 @@ header = {
 all_books = []
 page_count = 0
 
+init_db()
 while current_url:
     response = httpx.get(current_url, headers=header)
 
@@ -68,5 +71,6 @@ while current_url:
         break
 
 print(len(all_books))
-for book in all_books:
-    print(book)
+save_book(all_books)
+count, avg_price = fetch_summary()
+print(f"Stored {count} books in database. Average price: £{avg_price:.2f}")

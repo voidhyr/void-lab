@@ -110,3 +110,5 @@ credentials.py
 *.pem
 clab-lab01/
 notes/
+
+*.db
