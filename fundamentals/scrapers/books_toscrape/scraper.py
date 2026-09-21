@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 
 from fundamentals.scrapers.books_toscrape.db import init_db, save_book, fetch_summary
 
-rating_map = {"One": 1, "Two": 2, "Three": 3, "Four": 4, "Five": 5}
 current_url = "https://books.toscrape.com/"
 header = {
     "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0",
@@ -14,6 +13,18 @@ header = {
 
 all_books = []
 page_count = 0
+
+rating_map = {"One": 1, "Two": 2, "Three": 3, "Four": 4, "Five": 5}
+
+
+def clean_price(price_str: str):
+    cleaned_value = price_str.replace("£", "").strip()
+    return float(cleaned_value)
+
+
+def parse_rating(rating_word: str) -> int:
+    return rating_map.get(rating_word, 0)
+
 
 init_db()
 while current_url:
@@ -35,13 +46,14 @@ while current_url:
             # print(link)
 
         price_tag = book.find("p", class_="price_color")
-        price = price_tag.text
-        price = price.replace("£", "")
-        price = float(price)
+        price = clean_price(price_tag.text) if price_tag else 0.0
         # print(type(price))
 
         rating_tag = book.find("p", class_="star-rating")
-        rating_word = rating_tag.get("class", [])
+        rating_classes = rating_tag.get("class", []) if rating_tag else []
+        rating_word = rating_classes[1] if len(rating_classes) > 1 else ""
+        rating_num = parse_rating(rating_word)
+        
         stock_tag = book.find("p", class_="instock availability")
         stock_status = stock_tag.text
         stock_status = stock_status.strip()
