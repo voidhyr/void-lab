@@ -64,18 +64,6 @@ that every item is already complete.
 
 [Browse the scraper](fundamentals/scrapers/books_toscrape/)
 
-### Weather ETL Pipeline
-
-The separate **proETL** project provides practice with Python, SQL and data
-quality. Its intended workflow collects OpenWeather data, validates records,
-loads a PostgreSQL star schema and schedules processing with Apache Airflow.
-Looker Studio is the planned reporting layer.
-
-The project README is the source for its current implementation status. My use
-of SQLite for new local tools does not require replacing PostgreSQL here.
-
-[View proETL](https://github.com/voidhyr/proETL)
-
 ## Exploring
 
 Interested in Green AI, accessible computing and independent experimentation.
