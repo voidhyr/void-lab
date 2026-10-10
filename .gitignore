@@ -1,114 +1,95 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+
 *$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
-
-# PyCharm / VSCode project files
-.idea/
-.vscode/
-
-# Environment directories
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Django / Flask stuff (if applicable)
-*.log
-local_settings.py
-db.sqlite3
-instance/
-.webassets-cache
-
-# Scrapy stuff
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-build/
-target/
-
-# PyBuilder
-target/
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# VS Code / JetBrains
-*.code-workspace
-
-# Other OS / editor junk
-.DS_Store
-Thumbs.db
-
 # Backup files
 *.bak
-*.swp
-
-# Network captures — don't commit packet data
-*.pcap
+build/
+# Byte-compiled / optimized / DLL files
+.cache
 *.cap
-
-# Sensitive files — never commit these
-config.ini
-secrets.py
-credentials.py
-*.key
-*.pem
+# C extensions
 clab-lab01/
-notes/
-
+*.code-workspace
+config.ini
+*.cover
+.coverage
+.coverage.*
+coverage.xml
+credentials.py
 *.db
+*.db__pycache__/
+db.sqlite3
+develop-eggs/
+dist/
+# Distribution / packaging
+# Django / Flask stuff (if applicable)
+.dmypy.json
+dmypy.json
+docs/_build/
+downloads/
+.DS_Store
+*.egg
+*.egg-info/
+.eggs/
+eggs/
+.env
+env/
+ENV/
+env.bak/
+# Environment directories
+htmlcov/
+.hypothesis/
+.idea/
+.installed.cfg
+# Installer logs
+instance/
+.ipynb_checkpoints
+# Jupyter Notebook checkpoints
+*.key
+lib/
+lib64/
+local_settings.py
+*.log
+*.manifest
+# mypy
+.mypy_cache/
+# Network captures — don't commit packet data
+nosetests.xml
+notes/
+.nox/
+# Other OS / editor junk
+parts/
+*.pcap
+*.pem
+pip-delete-this-directory.txt
+pip-log.txt
+# PyBuilder
+*.pyc
+__pycache__/
+# PyCharm / VSCode project files
+*.py[cod]
+*.py,cover
+# PyInstaller
+.pyre/
+# Pyre type checker
+.pytest_cache/
+.Python
+.scrapy
+# Scrapy stuff
+sdist/
+secrets.py
+# Sensitive files — never commit these
+*.so
+*.spec
+# Sphinx documentation
+*.swp
+target/
+Thumbs.db
+.tox/
+# Unit test / coverage reports
+var/
+.venv
+venv/
+venv.bak/
+.vscode/
+# VS Code / JetBrains
+.webassets-cache
