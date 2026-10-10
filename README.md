@@ -78,6 +78,7 @@ void-lab/
 │   └── books-to-scrape/   Python scraper with SQLite storage
 ├── fundamentals/
 │   ├── python/            Python practice exercises and small scripts
+│   ├── rust/              Small Rust exercises while learning the language
 │   └── dsa/               Data structures and algorithms exercises
 ├── archive/               Earlier work kept for reference
 └── README.md
@@ -87,6 +88,7 @@ void-lab/
 | --- | --- |
 | `projects/` | Projects I'm building or improving, each with its own README |
 | `fundamentals/python/` | Introductory and intermediate Python practice: basics, collections, loops, OOP, patterns and small games |
+| `fundamentals/rust/` | Small Rust exercises and notes, one Cargo project per exercise |
 | `fundamentals/dsa/` | Searching, sorting, graph algorithms and other exercises |
 | `archive/` | Earlier projects retained for reference |
 
